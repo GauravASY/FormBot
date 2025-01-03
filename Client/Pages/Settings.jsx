@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./SignUp.css";
 import { useTheme } from "../Utility/ThemeContext";
+import { useUser } from "../Utility/UserContext";
+import axios from "axios";
 
 function Settings() {
+  const {user, localToken} =useUser();
   const [emailVisible, setemailVisible] = useState(false);
   const [passwordVisible, setpasswordVisible] = useState(false);
   const [newPassVisible, setnewPassVisible] = useState(false);
@@ -21,9 +24,48 @@ function Settings() {
     navigate('/');
   }
 
-  function handleUpdate(){
+  async function handleUpdate(){
     console.log(updateData);
+    if(updateData.name === "" && updateData.email === "" && updateData.password === "" && updateData.newPassword === ""){
+      return;
+    }
     // API call to update the user data, pass token for authentication
+    if(updateData.password !== "" && updateData.newPassword === ""){
+      alert('Please enter new password');
+      return;
+    }
+    if(updateData.password === "" && updateData.newPassword !== ""){
+      alert('Please enter old password');
+      return;
+    }
+    const updateObject ={};
+    if(updateData.name !== ""){
+      updateObject.name = updateData.name;
+    }
+    if(updateData.email !== ""){
+      updateObject.email = updateData.email;
+    }
+    if(updateData.password !== "" && updateData.newPassword !== ""){
+      updateObject.password = updateData.password;
+      updateObject.newPassword = updateData.newPassword;
+    }
+
+    try {
+      const {data} = await axios.put(`${import.meta.env.VITE_BACKEND_URL}/api/v1/user/update`, updateObject, {
+        headers: {
+          Authorization: localToken
+        } 
+      })
+      if(data.success){
+        console.log(data.msg);
+      }
+      else{
+        console.log(data.msg);
+      }
+    } catch (error) {
+        console.log("Error updating user data", error);
+    }
+
   }
 
   return (
