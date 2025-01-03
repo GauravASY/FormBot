@@ -14,7 +14,7 @@ app.use(cors(
         origin:"https://form-bot-gamma.vercel.app",  
         methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
         credentials: true,   
-      }
+    }
 ));
 app.use(express.json());
 

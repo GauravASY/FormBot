@@ -41,6 +41,8 @@ function App() {
   useEffect(() => {
     if (user !== null) {
       fetchWorkspace();
+      console.log(user.mySpace);
+      console.log("from App line 45");
     }
   }, [user, currentWorkSpaceId.id]);
 
@@ -202,7 +204,7 @@ function App() {
             <ConfirmationBox
               refer={confirmationBoxRef}
               fetchWorkspace={fetchWorkspace}
-              mySpace={user.mySpace}
+              mySpace={currentWorkSpace}
               token={token}
               folderId={folderId}
               formId={formId}
