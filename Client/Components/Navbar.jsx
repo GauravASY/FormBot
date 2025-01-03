@@ -75,6 +75,7 @@ function Navbar({setShareBoxVisible, token, currentWorkSpace, setCurrentWorkSpac
                 sharedWorkSpace.map((sharedObject)=>  <Link to={`/dashboard/${sharedObject.sharedSpace._id}`} key={sharedObject.sharedSpace._id}  className={`word ${theme} link`} style={{textDecoration:'none', borderBottom:'grey solid thin'}} onClick={()=> handleDropClick(sharedObject.sharedSpace)}>{sharedObject.sharedSpace.name}</Link> )
               ): (<></>)
             }
+              <span className='word link' style={{color:'white'}} onClick={()=> navigate("/settings")}> Settings</span>
               <span className='word link ' style={{color:'#FFA54C'}} onClick={handleLogOut}>Log Out</span>
           </div>
         </div>
