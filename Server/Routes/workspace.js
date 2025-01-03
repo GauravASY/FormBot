@@ -209,7 +209,7 @@ workspaceRouter.post('/submitresponse', authorization, async(req, res)=>{
 workspaceRouter.post('/shareform', authorization, async(req, res)=>{
     const {formId, workspaceId} = req.body;
     const formToken = jwt.sign({formId: formId, workspaceId:workspaceId}, process.env.JWT_LINKTOKEN_SECRET);
-    const sharelink = process.env.FRONTEND_URL + "fillForm/" + formToken;
+    const sharelink = process.env.FRONTEND_URL + "/fillForm/" + formToken;
     return res.json({msg:'Share link generated', link:sharelink, success:true});
 })
 
