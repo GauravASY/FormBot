@@ -48,6 +48,8 @@ function App() {
     if(user !== null){
       if(currentWorkSpaceId.id === undefined){
           setCurrentWorkSpace(user.mySpace);
+          console.log(user.mySpace._id);
+          console.log("from app line 52");
       }
       else{
         setCurrentWorkSpace(currentWorkSpaceId.id);
@@ -58,7 +60,7 @@ function App() {
   async function fetchWorkspace() {
     let accountId;
     if(currentWorkSpaceId.id === undefined){
-      accountId = user.mySpace._id;
+      accountId = user.mySpace;
     }
     else{
       accountId = currentWorkSpaceId.id;

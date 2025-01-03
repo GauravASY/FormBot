@@ -12,13 +12,9 @@ function ContentIcon({name, formID, setFormId, setConfirmBoxVisible, setCreation
     setCreationType("form");
   }
 
-  function handleFormClick(){
-    navigate(`/form/${formID}`);
-  }
-
 
   return (
-    <div className='CreateForm' style={{background:'grey', cursor:'pointer'}} onClick={()=> handleFormClick()}>
+    <div className='CreateForm' style={{background:'grey', cursor:'pointer'}} onClick={()=> navigate(`/forms/${formID}`)}>
         <span className='text1'>{name}</span>
         <img src={trash} style={{height:'16px', width:'16px', objectFit:'cover', position:'absolute', right:'-8px', top:'-8px'}} onClick={handleDeleteForm}/>
     </div>
