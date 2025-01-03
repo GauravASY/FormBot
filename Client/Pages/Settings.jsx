@@ -29,7 +29,6 @@ function Settings() {
     if(updateData.name === "" && updateData.email === "" && updateData.password === "" && updateData.newPassword === ""){
       return;
     }
-    // API call to update the user data, pass token for authentication
     if(updateData.password !== "" && updateData.newPassword === ""){
       alert('Please enter new password');
       return;
@@ -38,7 +37,12 @@ function Settings() {
       alert('Please enter old password');
       return;
     }
-    const updateObject ={};
+    const updateObject ={
+      name: "",
+      email: "",
+      password: "",
+      newPassword: ""
+    };
     if(updateData.name !== ""){
       updateObject.name = updateData.name;
     }

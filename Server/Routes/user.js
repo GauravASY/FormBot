@@ -167,4 +167,35 @@ userRouter.post('/generatelink', authorization, async(req, res)=>{
     }
 })
 
+userRouter.put("/update", authorization, async (req, res) => {
+    try {
+      const userId = req.userId;
+      const { name, email, password, newPassword } = req.body;
+
+      const user = await User.findById(userId);
+  
+      if (!user) {
+        return res.json({ msg: "User not found" , success:false});
+      }
+
+      if (name !== "") user.username = name;
+      if (email !== "") user.email = email;
+      if (password !=="" && newPassword !=="") {
+        const passwordCheck = bcrypt.compareSync(password, user.password);
+        if (!passwordCheck) {
+          return res.json({ msg: "Incorrect password", success: false });   
+        }
+        const hashedPassword = bcrypt.hashSync(newPassword, 12);
+        user.password = hashedPassword;
+      }
+      await user.save();
+  
+      res.json({ msg: "User updated successfully" , success:true});
+  
+    } catch (error) {
+      console.error("Error updating user:", error);
+      res.json({ msg: "Internal server error", success:false });
+    }
+  });
+
 export default userRouter;
