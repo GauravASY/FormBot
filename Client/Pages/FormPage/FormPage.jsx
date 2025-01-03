@@ -12,6 +12,17 @@ import { useParams } from "react-router-dom";
 import { useWorkSpace } from "../../Utility/WorkSpaceContext";
 import ResponseStats from "../../Components/ResponseStats/ResponseStats";
 import textBubble from "../../Assets/TextBubble.png";
+import imageBubble from "../../Assets/imageBubble.png";
+import videoBubble from "../../Assets/VideoBubble.png";
+import gifBubble from "../../Assets/GIFBubble3.png";
+import textInput from "../../Assets/TextInput.png";
+import numberInput from "../../Assets/NumberInput.png";
+import emailInput from "../../Assets/EmailInput.png";
+import phoneInput from "../../Assets/PhoneInput.png";
+import dateInput from "../../Assets/DateInput.png";
+import ratingInput from "../../Assets/RatingInput.png";
+import buttonsInput from "../../Assets/ButtonsInput.png";
+
 
 function FormPage() {
   const { user, localToken } = useUser();
@@ -136,21 +147,21 @@ function FormPage() {
                 formElements={formElements}
               />
               <FormBuilderButton
-                icon={"../../Assets/imageBubble.png"}
+                icon={imageBubble}
                 type="Image"
                 category="Bubble"
                 setFormElements={setFormElements}
                 formElements={formElements}
               />
               <FormBuilderButton
-                icon={"../../Assets/VideoBubble.png"}
+                icon={videoBubble}
                 type="Video"
                 category="Bubble"
                 setFormElements={setFormElements}
                 formElements={formElements}
               />
               <FormBuilderButton
-                icon={"../../Assets/GIFBubble3.png"}
+                icon={gifBubble}
                 type="GIF"
                 category="Bubble"
                 setFormElements={setFormElements}
@@ -165,49 +176,49 @@ function FormPage() {
             </span>
             <div className="BubbleContainer">
               <FormBuilderButton
-                icon={"../../Assets/TextInput.png"}
+                icon={textInput}
                 type="Text"
                 category="Input"
                 setFormElements={setFormElements}
                 formElements={formElements}
               />
               <FormBuilderButton
-                icon={"../../Assets/NumberInput.png"}
+                icon={numberInput}
                 type="Number"
                 category="Input"
                 setFormElements={setFormElements}
                 formElements={formElements}
               />
               <FormBuilderButton
-                icon={"../../Assets/EmailInput.png"}
+                icon={emailInput}
                 type="Email"
                 category="Input"
                 setFormElements={setFormElements}
                 formElements={formElements}
               />
               <FormBuilderButton
-                icon={"../../Assets/PhoneInput.png"}
+                icon={phoneInput}
                 type="Phone"
                 category="Input"
                 setFormElements={setFormElements}
                 formElements={formElements}
               />
               <FormBuilderButton
-                icon={"../../Assets/DateInput.png"}
+                icon={dateInput}
                 type="Date"
                 category="Input"
                 setFormElements={setFormElements}
                 formElements={formElements}
               />
               <FormBuilderButton
-                icon={"../../Assets/RatingInput.png"}
+                icon={ratingInput}
                 type="Rating"
                 category="Input"
                 setFormElements={setFormElements}
                 formElements={formElements}
               />
               <FormBuilderButton
-                icon={"../../Assets/ButtonsInput.png"}
+                icon={buttonsInput}
                 type="Buttons"
                 category="Input"
                 setFormElements={setFormElements}
