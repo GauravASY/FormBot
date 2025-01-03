@@ -9,7 +9,11 @@ function ResponseStats({formResponses, formElements, visitCount, start}) {
 
   return (
     <div style={{ display: "flex", flexDirection: "column", height: "100%", minHeight:'100vh' }} className={`${theme}`}>
-        <div style={{display:'flex', gap:'100px', alignItems:'center',justifyContent:'center', padding:'20px', marginTop:'40px'}}>
+
+        {
+            formResponses.length === 0 ? <div style={{display:'flex', justifyContent:'center', alignItems:'center', height:'100%', fontSize:'2rem'}}>No Responses Yet</div> : 
+          <div style={{ display: "flex", flexDirection: "column", height: "100%", minHeight:'100vh' }} className={`${theme}`}>
+            <div style={{display:'flex', gap:'100px', alignItems:'center',justifyContent:'center', padding:'20px', marginTop:'40px'}}>
             <StatBlock title="Views" value={visitCount}/>
             <StatBlock title="Starts" value={start}/>
         </div>
@@ -31,6 +35,10 @@ function ResponseStats({formResponses, formElements, visitCount, start}) {
 
             <StatBlock title="Completion Rate" value={`${formResponses.length}%`}/>
         </div>
+          </div>
+       
+       }
+        
     </div>
   )
 }
