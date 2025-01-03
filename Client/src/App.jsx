@@ -192,7 +192,7 @@ function App() {
               boxType={boxType}
               fetchWorkspace={fetchWorkspace}
               setBoxVisible={setBoxVisible}
-              mySpace={user.mySpace}
+              mySpace={currentWorkSpace}
               token={localToken}
             />
           ) : (
