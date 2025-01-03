@@ -11,6 +11,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import { useWorkSpace } from "../../Utility/WorkSpaceContext";
 import ResponseStats from "../../Components/ResponseStats/ResponseStats";
+import textBubble from "../../Assets/TextBubble.png";
 
 function FormPage() {
   const { user, localToken } = useUser();
@@ -128,7 +129,7 @@ function FormPage() {
             </span>
             <div className="BubbleContainer">
               <FormBuilderButton
-                icon={"../../Assets/TextBubble.png"}
+                icon={textBubble}
                 type="Text"
                 category="Bubble"
                 setFormElements={setFormElements}
