@@ -7,6 +7,8 @@ function CreationBox({ refer, boxType, fetchWorkspace, setBoxVisible, mySpace, t
   const { theme } = useTheme();
   const [name, setName] = useState("");
 
+  console.log(mySpace);
+  console.log("from CreationBox line 11");
   async function handleCreateFolder() {
     const { data } = await axios.post(
       `${import.meta.env.VITE_BACKEND_URL}/api/v1/workspace/createfolder`,
