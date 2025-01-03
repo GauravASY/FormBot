@@ -40,7 +40,7 @@ function LandingPage() {
                 <button className='button'  onClick={()=> navigate('/signin')}> Create a FormBot for free</button>
             </div>
         </div>
-        <div>
+        <div style={{display:'flex', justifyContent:'center', alignItems:'center'}}>
             <img src={mainImage} className='Image'/>
         </div>
         <Footer/>
