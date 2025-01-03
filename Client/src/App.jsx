@@ -53,7 +53,7 @@ function App() {
         setCurrentWorkSpace(currentWorkSpaceId.id);
       }
     }
-  }, [user]);
+  }, [user, currentWorkSpaceId.id]);
 
   async function fetchWorkspace() {
     let accountId;
