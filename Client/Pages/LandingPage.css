@@ -1,0 +1,64 @@
+.title{
+    font-family: "Outfit", serif;
+    font-size : 4rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #4B83FF 0%, #B794F4 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text{
+    font-family: "Open Sans", serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #FFFFFF
+}
+
+.Footer-title{
+    font-family: "Outfit", serif;
+    font-size : 1.1rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.Footer-text{
+    font-family: "Open Sans", serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+.button{
+    background: #1A5FFF;
+    margin-top: 14px;
+    padding: 12px 0px;
+    width: 30%;
+    border-radius: 0.5rem;
+    border: none;
+    font-family: "Open Sans", serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #FFFFFF
+}
+
+.navButton{
+    color: #7EA6FF;
+    border: #7EA6FF solid 1px;
+    border-radius: 0.5rem;
+    font-family: "Open Sans", serif;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 8px 16px;
+    width: fit-content;
+    background: #18181B;
+    cursor: pointer;
+}
+
+.Image{
+    margin-top: 30px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}

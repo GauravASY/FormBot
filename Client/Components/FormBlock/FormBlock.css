@@ -1,0 +1,23 @@
+.FormBlockContainer{
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+    padding: 8px 12px;
+    border-radius: 0.5rem;
+    position: relative;
+    min-width: 22%;
+    max-width: 34%;
+}
+
+.DeleteContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    border-radius: 50%;
+    position: absolute;
+    top:-8px;
+    right:-8px;
+    cursor: pointer;
+}
+

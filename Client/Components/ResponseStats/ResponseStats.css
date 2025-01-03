@@ -1,0 +1,32 @@
+.StatBlock{
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.8rem;
+    min-height: 80px;
+    height: fit-content;
+    min-width: 120px;
+    width: fit-content;
+    padding : 10px 24px;
+    gap:10px;
+    background-color: #323232;
+    color: white;
+}
+
+.cell{
+    max-width : 140px;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px 14px;
+    font-family: 'Open Sans', serif;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.TableContainer{
+    margin: 0px 140px;
+    overflow: scroll;
+    padding: 12px 0px;
+    min-height: 80px;
+    max-height: 160px;
+}

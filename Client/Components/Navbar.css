@@ -1,0 +1,127 @@
+.navbar{
+    padding: 8px 30px;
+    display: flex;
+    justify-content: center;
+    border-bottom: grey solid thin;
+    transition: 0.5s ease-in-out;
+}
+
+.highlight{
+    border: solid #7EA6FF 2px;
+    color : #7EA6FF;
+}
+
+.FormNavbar{
+    padding: 8px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: grey solid thin;
+    position: relative;
+}
+
+.word{
+    font-family: 'Open Sans', serif;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.switch{
+    position: relative;
+    right : -20%;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    gap : 6px;
+}
+
+.switch input{
+    display: none;
+}
+
+.slider{
+    cursor: pointer;
+    position: relative;
+    height: 20px;
+    width: 50px;
+    background-color: #ccc;
+    border-radius: 100px;
+    transition: .3s;
+}
+
+.slider:before{
+    position: absolute;
+    content: '';
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+input:checked + .slider{
+    background-color: #1A5FFF;
+}
+
+input:checked + .slider:before{
+    transform: translateX(30px);
+}
+
+.formNavButton{
+    border-radius: 0.5rem;
+    width: fit-content;
+    padding: 4px 16px;
+    border:none;
+    cursor: pointer; 
+}
+
+.share{
+    border-radius: 0.5rem;
+    color: white;
+    background: #1A5FFF;
+    width: fit-content;
+    padding: 8px 16px;
+    border:none;
+    cursor: pointer;
+    position: relative;
+    right: -32%;
+}
+
+.navInput{
+    padding: 4px 16px;
+}
+
+.dropdownContainer{
+    position: relative;
+    display: inline-block;
+    min-width: 200px;  
+}
+
+.link{
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.dropdownContent{
+    position: absolute;
+    left:0;
+    top: 100%;
+    width: 116%;
+    max-height: 150px;
+    z-index: 1;
+    text-decoration: none;
+    border: grey solid thin;
+    border-radius: 0 0 6px 6px;
+}
+
+.dropdown{
+     padding: 8px 16px;
+     border : none;
+     cursor: pointer;
+     width: 100%;
+     text-align: left;
+     border:grey solid thin;
+     border-radius: 6px;
+}

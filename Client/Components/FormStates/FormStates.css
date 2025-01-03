@@ -1,0 +1,71 @@
+.sendButton{
+    border : none;
+    padding : 9px 16px;
+    width: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.2rem;
+    box-shadow: 1px 1px 2px 1px #00000040;
+}
+.InputContainer{
+    display: flex;
+    gap:10px;
+    align-items: center;
+    width: 20vw;
+    padding: 0;
+}
+
+.leftContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 97%;
+    padding : 9px 10px;
+    border:none;
+    box-shadow: 1px 1px 2px 1px #00000040;
+    border-radius: 0.2rem;
+}
+
+.inputBox{
+    width: 95%;
+    padding : 9px 16px;
+    border:none;
+    box-shadow: 1px 1px 2px 1px #00000040;
+    border-radius: 0.2rem;
+}
+.BubbleBox{
+    width: fit-content;
+    padding : 6px 12px;
+    color:"white";
+    border:none;
+    background-color: #1A5FFF;
+    box-shadow: 1px 1px 2px 1px #00000040;
+    border-radius: 0.2rem; 
+}
+
+input::placeholder{
+    color: black;
+}
+
+.radioInput {
+    position: relative;
+    width: 18px; 
+    height: 18px; 
+    border-radius: 50%; 
+    background: #1A5FFF;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .selected{
+    background:  #FF8E21; 
+  }
+  .radioInput input{
+    position: absolute;
+    opacity : 0;
+    pointer-events: none;
+  }

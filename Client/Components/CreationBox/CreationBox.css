@@ -1,0 +1,50 @@
+.heading{
+    font-family: "Open sans", serif;
+    font-weight: 600;
+}
+
+.input{
+    padding: 18px 0px;
+    border-radius: 0.8rem;
+    border: grey 1px solid;
+    padding-left: 12px;
+}
+
+.boxbutton{
+    width: 50%;
+    border: none;
+    font-family: "Open sans", serif;
+    font-size: 1.7rem;
+    font-weight: 600;
+    
+}
+
+.button2{
+    border: none;
+    font-family: "Open sans", serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    background-color: #1A5FFF;
+    border-radius: 0.8rem;
+    padding: 10px 0px;
+}
+
+.DropDownContent{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 10;
+    box-shadow: 1px 1px 2px 1px white;
+    width: 100%;
+}
+.DropDown{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:8px;
+}
+
+.DropDownContainer{
+    position: relative;
+}

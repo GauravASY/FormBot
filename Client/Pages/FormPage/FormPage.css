@@ -1,0 +1,32 @@
+.OuterContainer{
+    flex-grow: 1;
+    display: flex;
+    padding: 10px 30px;
+    position: relative;
+}
+
+.ButtonContainer{
+    width: 23%;
+    height : 90%;
+    position: fixed;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    border: solid #00000029 thin
+}
+
+.BubbleContainer{
+    padding: 0px 12px;
+    display: grid;
+    column-gap: 12px;
+    row-gap: 12px;
+    grid-template-columns: repeat(2, 1fr);;
+}
+
+.FormContainer{
+    flex-grow: 1;
+    display: flex;
+    gap:16px;
+    flex-direction: column;
+    padding-left: 45%;
+}

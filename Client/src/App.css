@@ -1,0 +1,52 @@
+.MainContainer{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap : 24px;
+    padding: 24px 130px;
+    overflow: scroll;
+}
+
+.folderContainer{
+    display: grid;
+    height: fit-content;
+    gap:12px;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.text1{
+    font-family: "Open Sans", serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #FFFFFFEB
+}
+
+.titleTile{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 6px 8px;
+    background: #3B3B3B;
+    color:white;
+    border-radius: 0.5rem;
+}
+
+.contentContainer{
+    display: grid;
+    height: fit-content;
+    gap:24px;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.CreateForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 0.5rem;
+    background-color: #1A5FFF;
+    height: 200px;
+    width: 180px;
+    color:white;
+}

@@ -1,0 +1,45 @@
+.button{
+    background-color: #1A5FFF;
+    padding: 10px 0px;
+    border-radius: 0.8rem;
+    border: none;
+    color: #FFFFFF;
+    font-family: "Poppins", serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.inputArea{
+    padding: 10px 0px;
+    border-radius: 0.8rem;
+    border: grey 1px solid;
+    padding-left: 12px;
+    background-color: #18181B;
+}
+input:-webkit-autofill {
+    background-color: #18181B !important;
+    box-shadow: 0 0 0px 1000px #18181B inset !important;
+    -webkit-text-fill-color: white !important;
+    color: white !important;
+  }
+
+.Error{
+    font-family: "Poppins", serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #FF4141;
+}
+.input-text{
+    font-family: "Poppins", serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color:white;
+}
+
+.text{
+    font-family: "Poppins", serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #FFFFFF
+}
