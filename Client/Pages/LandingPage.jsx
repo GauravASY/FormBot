@@ -16,7 +16,7 @@ function LandingPage() {
     if(user !== null){
       navigate('/dashboard');
     }
-  }, [])
+  }, [user])
 
   return (
     <div style={{display:'flex', flexDirection:'column', gap:'1rem', background:'#18181B',height:'100%'}}>
