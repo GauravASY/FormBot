@@ -19,7 +19,7 @@ export const UserProvider = ({ children }) => {
     }, [localToken]); 
 
     useEffect(() => {
-        const publicRoutes = ['/signin', '/signup']; 
+        const publicRoutes = ['/signin', '/signup', '/']; 
         if (!localToken && !publicRoutes.includes(location.pathname)) {
             navigate('/signin');
         }
