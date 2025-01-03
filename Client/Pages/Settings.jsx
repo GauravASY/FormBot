@@ -25,7 +25,6 @@ function Settings() {
   }
 
   async function handleUpdate(){
-    console.log(updateData);
     if(updateData.name === "" && updateData.email === "" && updateData.password === "" && updateData.newPassword === ""){
       return;
     }
@@ -61,7 +60,13 @@ function Settings() {
         } 
       })
       if(data.success){
-        console.log(data.msg);
+        alert(data.msg);
+        setUpdateData({
+          name: "",
+          email: "",
+          password: "",
+          newPassword: ""
+        });
       }
       else{
         console.log(data.msg);
