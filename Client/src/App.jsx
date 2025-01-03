@@ -41,8 +41,6 @@ function App() {
   useEffect(() => {
     if (user !== null) {
       fetchWorkspace();
-      console.log(user.mySpace);
-      console.log("from App line 45");
     }
   }, [user, currentWorkSpaceId.id]);
 
@@ -60,7 +58,7 @@ function App() {
   async function fetchWorkspace() {
     let accountId;
     if(currentWorkSpaceId.id === undefined){
-      accountId = user.mySpace;
+      accountId = user.mySpace._id;
     }
     else{
       accountId = currentWorkSpaceId.id;
