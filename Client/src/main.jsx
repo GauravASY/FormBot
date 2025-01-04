@@ -25,11 +25,12 @@ createRoot(document.getElementById('root')).render(
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/dashboard" element={<App />} />
+        <Route path="/fillform/:formToken" element={<FillForm />}/>
         <Route path="/dashboard/:id" element={<App />} />
         <Route path="/share/:linktoken" element={<Share />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/forms/:id" element={<FormPage/>}/>
-        <Route path="/fillForm/:formToken" element={<SignIn/>}/>
+        
       </Routes>
       </WorkSpaceProvider>
       </ThemeProvider>
