@@ -29,7 +29,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/share/:linktoken" element={<Share />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/forms/:id" element={<FormPage/>}/>
-        <Route path="/fillForm/:id" element={<FillForm/>}/>
+        <Route path="/fillForm/:formToken" element={<FillForm/>}/>
       </Routes>
       </WorkSpaceProvider>
       </ThemeProvider>

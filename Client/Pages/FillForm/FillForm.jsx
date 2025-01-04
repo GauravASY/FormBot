@@ -22,7 +22,7 @@ function FillForm() {
     const {user, localToken} = useUser();
     const [visitCount, setVisitCount] = useState(0);
     const param = useParams();
-    const formToken = param.id;
+    const formToken = param.formToken;
     const [formElements, setFormElements] = useState([]);
     const [start, setStart] = useState(0);
     const [currentStep, setCurrentStep] = useState(0);
