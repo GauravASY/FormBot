@@ -160,8 +160,8 @@ workspaceRouter.post("/savestart", authorization, async(req, res)=>{
     }
 })
 
-workspaceRouter.get("/fillform/:id", authorization, async(req, res)=>{
-    const formToken = req.params.id;
+workspaceRouter.get("/fillform/:formToken", authorization, async(req, res)=>{
+    const formToken = req.params.formToken;
     const userId = req.userId;
     try {
         const {formId, workspaceId} = jwt.verify(formToken, process.env.JWT_LINKTOKEN_SECRET);
