@@ -160,7 +160,7 @@ userRouter.post('/generatelink', authorization, async(req, res)=>{
     const permission =req.body.permission;
     try {
         const linktoken = jwt.sign({userId, permission}, process.env.JWT_LINKTOKEN_SECRET);
-        const link = process.env.FRONTEND_URL +"share/"+ linktoken;
+        const link = process.env.FRONTEND_URL +"/share/"+ linktoken;
         return res.json({msg:'Link Generated', link : link, success:true})
     } catch (error) {
         return res.json({msg:"Error Occured", success: false});
