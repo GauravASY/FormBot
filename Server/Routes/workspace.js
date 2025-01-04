@@ -25,12 +25,18 @@ workspaceRouter.post('/', authorization, async (req, res)=>{
 
 workspaceRouter.post('/createfolder', authorization, async(req, res)=>{
     const {accountId, name}= req.body;
+    console.log("Create folder handler line 28");
+    console.log(accountId);
     try {
+        console.log("Create folder handler line 31");
         const folder = await Folder.create({name : name}); 
+        console.log("Create folder handler line 33");
         if(!folder){
             return res.json({msg :'Folder creation error', success:false});
         }
+        console.log("Create folder handler line 37");
         const workspace = await WorkSpace.findByIdAndUpdate(accountId, {$push : {folders : folder._id} });
+        console.log("Create folder handler line 39");
         return res.json({msg :'Folder created', success: true});  
     } 
     catch (error) {

@@ -81,6 +81,9 @@ function FormPage() {
       navigator.clipboard.writeText(data.link);
       alert("Copied to clipboard");
     }
+    else{
+      alert(data.msg);
+    }
   }
 
   async function saveForm() {
