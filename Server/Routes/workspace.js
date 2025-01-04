@@ -208,6 +208,10 @@ workspaceRouter.post('/submitresponse', authorization, async(req, res)=>{
 
 workspaceRouter.post('/shareform', authorization, async(req, res)=>{
     const {formId, workspaceId} = req.body;
+    const workspace = await WorkSpace.findOne({ _id: workspaceId, "forms._id": formId });
+    if (!workspace) {
+        return res.json({msg:'Unauthorized to share', success: false});
+    }
     const formToken = jwt.sign({formId: formId, workspaceId:workspaceId}, process.env.JWT_LINKTOKEN_SECRET);
     const sharelink = process.env.FRONTEND_URL + "/fillForm/" + formToken;
     return res.json({msg:'Share link generated', link:sharelink, success:true});
