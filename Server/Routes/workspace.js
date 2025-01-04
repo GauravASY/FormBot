@@ -27,6 +27,7 @@ workspaceRouter.post('/createfolder', authorization, async(req, res)=>{
     const {accountId, name}= req.body;
     console.log("Create folder handler line 28");
     console.log(accountId);
+    console.log(name);
     try {
         console.log("Create folder handler line 31");
         const folder = await Folder.create({name : name}); 
