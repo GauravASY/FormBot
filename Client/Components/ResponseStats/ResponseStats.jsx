@@ -55,8 +55,6 @@ function StatBlock({title, value}){
 
 
 const DynamicTable = ({ columnData, rowData }) => {
-
-    console.log(rowData);
     if (!rowData || rowData.length === 0 ) {
       return <div>No Data Available</div>;
     }

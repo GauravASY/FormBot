@@ -102,7 +102,7 @@ function FillForm() {
             Authorization : localToken
           }
         })
-        console.log(data); 
+        alert(data.msg); 
     }
   
     if (loading) {
@@ -120,7 +120,7 @@ function FillForm() {
 
   return (
     <div style={{ display: "flex", flexDirection: "column",minHeight:"100vh",  height: "100%", padding : "20px 80px", gap:"22px" }} className={`${theme}`}>
-      <FormNavbar/>
+
           {
             responses && responses.length !== 0 ? (
               responses.map((response, index) => (

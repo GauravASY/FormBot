@@ -42,7 +42,7 @@ function FormPage() {
     if (localToken) {
       fetchFormDetails();
     }
-  }, [localToken]);
+  }, [localToken, showStats]);
 
   async function fetchFormDetails() {
     const { data } = await axios.post(
