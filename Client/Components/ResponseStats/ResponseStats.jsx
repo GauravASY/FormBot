@@ -5,7 +5,6 @@ import { PieChart } from 'react-minimal-pie-chart';
 
 function ResponseStats({formResponses, formElements, visitCount, start}) {
     const {theme} = useTheme();
-    let uncompleted = start - formResponses.length;
 
   return (
     <div style={{ display: "flex", flexDirection: "column", height: "100%", minHeight:'100vh' }} className={`${theme}`}>
@@ -25,7 +24,7 @@ function ResponseStats({formResponses, formElements, visitCount, start}) {
                 <PieChart
                     data={[
                         { title: 'Completed', value: formResponses.length || 0 , color: '#3B82F6' },
-                        { title: 'Remaining', value: {uncompleted}, color: 'grey' },
+                        { title: 'Remaining', value: start - formResponses.length, color: 'grey' },
                     ]}
                     lineWidth={20}
                     animate
