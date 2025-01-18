@@ -29,7 +29,7 @@ function ResponseStats({formResponses, formElements, visitCount, start}) {
                     lineWidth={20}
                     animate
                     startAngle={-45}
-                />;
+                />
             </div>
 
             <StatBlock title="Completion Rate" value={`${formResponses.length}%`}/>
