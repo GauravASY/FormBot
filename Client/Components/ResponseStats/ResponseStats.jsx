@@ -32,7 +32,7 @@ function ResponseStats({formResponses, formElements, visitCount, start}) {
                 />
             </div>
 
-            <StatBlock title="Completion Rate" value={`${formResponses.length}%`}/>
+            <StatBlock title="Completion Rate" value={`${formResponses.length * 100 / start}%`}/>
         </div>
           </div>
        
