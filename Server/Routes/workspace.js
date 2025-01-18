@@ -131,10 +131,9 @@ workspaceRouter.post("/updatevisit", authorization, async(req, res)=>{
             return res.json({msg:'Workspace or form does not exist', success: false});
         }
         let val = workspace.forms[0].visitCount + visitCount;
-        console.log(val);
         const updatedWorkspace = await WorkSpace.findOneAndUpdate(
             { _id: workspaceId, "forms._id": formId }, 
-            {visitCount : val},
+            { $set: { "forms.$.visitCount": val } },
           );
         return res.json({msg:'Start updated', success: true})
     } catch (error) {
@@ -152,9 +151,10 @@ workspaceRouter.post("/savestart", authorization, async(req, res)=>{
         if(!workspace){
             return res.json({msg:'Workspace or form does not exist', success: false});
         }
+        let val = workspace.forms[0].start + start;
         const updatedWorkspace = await WorkSpace.findOneAndUpdate(
             { _id: workspaceId, "forms._id": formId }, 
-            {start : workspace.forms[0].start + start},
+            { $set: { "forms.$.start": val } },
           );
         return res.json({msg:'Start updated', success: true})
     } catch (error) {
