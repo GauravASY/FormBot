@@ -130,11 +130,11 @@ workspaceRouter.post("/updatevisit", authorization, async(req, res)=>{
         if(!workspace){
             return res.json({msg:'Workspace or form does not exist', success: false});
         }
-        console.log(workspace);
-        console.log("workspace.js line number 134");
+        let val = workspace.forms[0].visitCount + visitCount;
+        console.log(val);
         const updatedWorkspace = await WorkSpace.findOneAndUpdate(
             { _id: workspaceId, "forms._id": formId }, 
-            {visitCount : workspace.forms[0].visitCount + visitCount},
+            {visitCount : val},
           );
         return res.json({msg:'Start updated', success: true})
     } catch (error) {
