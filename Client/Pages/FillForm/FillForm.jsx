@@ -39,7 +39,7 @@ function FillForm() {
 
     async function handleVisitCount(){
         setVisitCount(visitCount + 1);
-        const {data} = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/workspace/updatevisit`, {formToken: formToken, visitCount: visitCount}, {
+        const {data} = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/workspace/updatevisit`, {formToken: formToken, visitCount: 1}, {
           headers : {
             Authorization : localToken
           }
