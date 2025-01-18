@@ -79,7 +79,7 @@ function FillForm() {
     }
 
     async function handleSaveStart(){
-      const {data} = axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/workspace/savestart`, {formToken: formToken, start:start}, {
+      const {data} = axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/v1/workspace/savestart`, {formToken: formToken, start:1}, {
         headers : { Authorization : localToken }
       })
     }
